@@ -1,2 +1,1 @@
-# CMSC330 Organization of Programming Languages
-<center>Fall 2021</center>
+# CMSC330 Organization of Programming Languages, Fall 2021
