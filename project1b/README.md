@@ -1,6 +1,6 @@
 # Project 1b: Battleship Game
 
-Due: September 12, 2021 at 11:59 PM (late September 13, *10% penalty*).
+Due: September 13, 2021 at 11:59 PM (late September 14, *10% penalty*).
 
 Points: 30 public, 36 semipublic, 34 secret
 
