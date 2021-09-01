@@ -5,7 +5,7 @@ This project is simply to get your system ready.  You will "submit" this project
 
 ## NOTES:
 ### Problem with OPAM?
-If you are failing the public test with error "The wrong version of OPAM is installed. Expected '2.0' Actual '2.1'", modify line 10 in public.rb from
+If you are failing the public test with error "The wrong version of OPAM is installed. Expected '2.0' Actual '2.1'", modify line 10 in `public.rb` from
 ```
 OPAM_VERSION = "2.0"
 ```
@@ -18,9 +18,17 @@ OPAM_VERSION = "2.1"
 Follow the directions for macOS, but do the following for Step 6 instead:
 
 - We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
-- If you are already on 4.12.0, you can skip to #7
+- If you are already on 4.12.0, you can skip to the final step in this list.
 - Run `opam update`
 - If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
+- To wrap up, let's make sure you don't fail the validation test. Modify line 9 in `public.rb` from 
+    ```
+    OCAML_VERSION = "4.11"
+    ```
+    to
+    ```
+    OCAML_VERSION = "4.12"
+    ```
 
 
 ## Languages and Packages
