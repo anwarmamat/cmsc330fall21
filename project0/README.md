@@ -3,6 +3,25 @@ Due: September 14, 2021 at 11:59 PM
 
 This project is simply to get your system ready.  You will "submit" this project for a grade.  The good-faith attempt (GFA) rule **does not apply** to this project.
 
+## NOTES:
+### Problem with OPAM?
+If you are failing the public test with error "The wrong version of OPAM is installed. Expected '2.0' Actual '2.1'", modify line 10 in public.rb from
+```
+OPAM_VERSION = "2.0"
+```
+to
+```
+OPAM_VERSION = "2.1"
+```
+
+### Do you have a macbook with an M1 chip?
+Follow the directions for macOS, but do the following for Step 6. instead:
+    - We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
+    - If you are already on 4.12.0, you can skip to #7
+    - Run `opam update`
+    - If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
+
+
 ## Languages and Packages
 
 In this course, we will primarily be using Ruby and OCaml.  Below is a summary of the packages that need to be installed.  You do not need to use these links, they are just for reference or learning more about the languages and/or packages.  You can skip below to the instructions.
