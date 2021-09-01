@@ -15,11 +15,12 @@ OPAM_VERSION = "2.1"
 ```
 
 ### Do you have a macbook with an M1 chip?
-Follow the directions for macOS, but do the following for Step 6. instead:
-    - We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
-    - If you are already on 4.12.0, you can skip to #7
-    - Run `opam update`
-    - If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
+Follow the directions for macOS, but do the following for Step 6 instead:
+
+- We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
+- If you are already on 4.12.0, you can skip to #7
+- Run `opam update`
+- If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
 
 
 ## Languages and Packages
