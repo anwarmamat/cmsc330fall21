@@ -1,6 +1,6 @@
 # Project 1a: Ruby Warmup
 
-Due: September 9, 2021 at 11:59 PM (late September 10, *5% penalty*). **Note the deadline: just under one week**
+Due: September 7, 2021 at 11:59 PM (late September 8, *5% penalty*). **Note the deadline: just under one week**
 
 Points: 80 public, 20 semipublic
 
@@ -54,7 +54,7 @@ Implement part 1 in `warmup.rb`. Each of the methods you must implement are desc
 #### `isPalindrome(n)`
 - **Description**: Returns `true` if `n` is a palindrome and `false` otherwise. A palindrome is the same read forward and backward.
 - **Type**: `(Integer) -> Bool`
-- **Assumptions**: `n` will not be provided with any leading 0s.
+- **Assumptions**: `n` is non-negative; `n` will not be provided with any leading 0s.
 - **Hint**: It may be easier to do this after converting the provided integer to a String.
 - **Examples**:
   ```ruby
@@ -116,16 +116,21 @@ Implement part 1 in `warmup.rb`. Each of the methods you must implement are desc
 # Part 2 (PhoneBook class)
 In part 2, you will be implementing a PhoneBook class. It is up to you to decide how to store the data (i.e., how to define a phonebook instance's fields) so that you can correctly implement all the required methods.
 
+Even though the data structure you will implement is up to you, keep the following in mind:
+- The Phonebook will hold names and phone numbers, as well as a note on whether each name and phone number pair is **listed** or not.
+- By listed, we mean that they are marked as so (not simply stored). You might want to use a boolean to determine it so.
+- The Phonebook might contain listed and unlisted entries. How you should add them will be specified in the `add` method below.
+
+
 #### `initialize`
 - **Description**: This is the constructor. You should initialize the fields that you think your class needs for successful evaluation of the remaining methods. We do not test the constructor directly, but we do test it indirectly by testing the remaining methods.
 
 #### `add(name, number, is_listed)`
-- **Description**: Adds a new entry to the PhoneBook. `name` is the name of the person and `number` is that person's phone number. The `is\_listed` parameter identifies if this entry should be listed or unlisted in the PhoneBook (`true` if listed, `false` if unlisted). Return `true` if the operation was successful, and `false` otherwise. Here are some cases to consider:
+- **Description**: This method attempts to add a new entry to the PhoneBook. `name` is the name of the person and `number` is that person's phone number. The `is\_listed` parameter identifies if this entry should be listed or unlisted in the PhoneBook (`true` if listed, `false` if unlisted). Return `true` if the operation was successful, and `false` otherwise. Here are the **requirements** for the add method:
     - If the person already exists, then the entry cannot be added to the PhoneBook.
     - If `number` is not in the format `NNN-NNN-NNNN`, the entry cannot be added to the PhoneBook.
-    - If `number` already exists and is listed in the PhoneBook, the entry cannot be added. However, if `number` exists and is unlisted, the entry can be added.
-    - ~If `number` already exists as an unlisted number in the PhoneBook, but you are trying to add it as a listed number, the entry can be added.~
-    - A `number` can be added as unlisted any number of times, but can only be added as listed once.
+    - A `number` can be added as *unlisted* any number of times, but can only be added as *listed* once. This means that if `number` already exists and is *listed* in the PhoneBook, the new entry can only be added if the entry will be *unlisted*.
+
 - **Type**: `(String, String, Bool) -> Bool`
 - **Assumptions**: No phone number will start with 0.
 - **Examples**:
@@ -135,6 +140,17 @@ In part 2, you will be implementing a PhoneBook class. It is up to you to decide
   @phonebook.add("Jane", "220-134-1312", false) == true
   @phonebook.add("John", "110-192-1862", false) == false
   @phonebook.add("Ravi", "110", true) == false
+  ```
+  
+  Here is another example:
+  
+  ```ruby
+  @phonebook2 = PhoneBook.new
+  @phonebook2.add("Alice", "012-345-6789", false) == true
+  @phonebook2.add("Bob", "012-345-6789", false) == true
+  @phonebook2.add("Eve", "012-345-6789", true) == true
+  @phonebook2.add("Rob", "012-345-6789, true) == false
+  @phonebook2.add("Johnny B. Good", "012-345-6789, false) == true
   ```
 
 #### `lookup(name)`
