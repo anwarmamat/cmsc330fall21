@@ -98,6 +98,9 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 6. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 7. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
 
@@ -135,28 +138,37 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 7. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 8. Install gradescope-submit
-    - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
+    - Run `cargo install gradescope-submit`.  If this fails, try closing and
+      re-opening your terminal window.
 
 ### macOS
 
-1. Install the Homebrew package manager
-    - Run `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"`
-2. Check your Ruby version by running `ruby -v`.  If it's older than 2.2.2, you'll need to install a newer version using `brew install ruby`
+1. Install the Homebrew package manager (Updated in Fall 2021)
+    - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+2. Check your Ruby version by running `ruby -v`.  If it's older than 2.2.2,
+   you'll need to install a newer version using `brew install ruby`
 3. Install the basic dependencies
     - Run `brew install ocaml opam graphviz openssl`
 4. Install some Ruby gems
     - Run `sudo gem install minitest sqlite3 sinatra`
-    - If it hangs on `Installing ri documentation for sinatra`, just hit Ctrl+C.  It will have successfully installed anyway
+    - If it hangs on `Installing ri documentation for sinatra`, just hit Ctrl+C.
+      It will have successfully installed anyway
 5. Initialize the OCaml package manager
     - Run `opam init`
-    - When prompted to modify `~/.bash_profile` (or similar file), type "y"
-    - Run `source ~/.bash_profile` (or the file mentioned above)
+    - When prompted to modify `~/.zshrc` or `~/.bash_profile` (or similar file), type "y"
+    - Run  `source ~/.zshrc` or `source ~/.bash_profile` (or the file mentioned above)
 6. Initialize OCaml
-    - We will be using OCaml version 4.11.0.  Run `ocaml -version` to check which version is currently installed
-    - If you are already on 4.11.0, you can skip to #7
+    - We will be using OCaml version 4.12.0.  Run `ocaml -version` to check
+      which version is currently installed
+    - If you are already on 4.12.0, you can skip to #7
     - Run `opam update`
-    - If you are on another version, run `opam switch 4.11.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.11.0`.  This may take a while, please be patient
+    - If you are on another version, run `opam switch 4.12.0`.  If you get an
+      error saying that switch is not currently installed, run `opam switch
+      create 4.12.0`.  This may take a while, please be patient
     - Run `eval $(opam env)`
     - Ensure you are now on the correct version by running `ocaml -version`
 7. Install OCaml packages
@@ -164,9 +176,32 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 8. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 9. Install gradescope-submit
-    - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
+    - Run `cargo install gradescope-submit`.  If this fails, try closing and
+      re-opening your terminal window.
 
 ## Verifying Setup
 
-This is the graded part of this project.  To verify that you have the correct versions installed, run `ruby test/public/public.rb` in this directory.  You should not get any errors.  This will create a file called p0.report.  Submit this file by running `gradescope-submit` in the project folder.  You will have to enter your credentials the first time, but for future projects you should not have to.  Alternatively, you can manually submit the file to Gradescope by uploading the p0.report file to the appropriate assignment.
+This is the graded part of this project.  To verify that you have the correct
+versions installed, run `ruby test/public/public.rb` in this directory.  You
+should not get any errors.  This will create a file called p0.report.  Submit
+this file by running `gradescope-submit` in the project folder.  You will have
+to enter your credentials the first time, but for future projects you should not
+have to.  Alternatively, you can manually submit the file to Gradescope by
+uploading the p0.report file to the appropriate assignment.
+
+## `gradescope-submit` Troubleshooting
+### Incorrect Passwords 
+Make sure that the email address and password you entered is of the account
+where your CMSC 330 course enrollment shows up. (If you login through "school
+credentials" option and don't remember your **Gradescope** password, please
+reset it.) Great chances are that people have multiple Gradescope accounts, and
+it is suggested to merge them before trying to submit by the program.
+
+### HTTP Errors
+Remove the `gradescope-submit` config file by doing
+`rm -r ~/.gradescope-submit`. Then, refer to the troubleshooting for incorrect
+passwords and try it again.
