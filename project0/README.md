@@ -147,7 +147,7 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 
 ### macOS
 
-1. Install the Homebrew package manager (Updated on Fall 2021)
+1. Install the Homebrew package manager (Updated in Fall 2021)
     - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
 2. Check your Ruby version by running `ruby -v`.  If it's older than 2.2.2,
    you'll need to install a newer version using `brew install ruby`
@@ -199,7 +199,7 @@ Make sure that the email address and password you entered is of the account
 where your CMSC 330 course enrollment shows up. (If you login through "school
 credentials" option and don't remember your **Gradescope** password, please
 reset it.) Great chances are that people have multiple Gradescope accounts, and
-it is suggested to merge them before trying to submit by using the program.
+it is suggested to merge them before trying to submit by the program.
 
 ### HTTP Errors
 Remove the `gradescope-submit` config file by doing
