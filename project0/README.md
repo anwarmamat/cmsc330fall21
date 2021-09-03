@@ -98,9 +98,9 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 6. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
-    - Append `~/.cargo/bin` to the `PATH` environment variable. 
-      - If `echo $SHELL` is `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
-      - If `echo $SHELL` is `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 7. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
 
@@ -138,9 +138,9 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 7. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
-    - Append `~/.cargo/bin` to the `PATH` environment variable. 
-      - If `echo $SHELL` is `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
-      - If `echo $SHELL` is `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 8. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
@@ -176,13 +176,32 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
 8. Install Rust
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
-    - Append `~/.cargo/bin` to the `PATH` environment variable. 
-      - If `echo $SHELL` is `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
-      - If `echo $SHELL` is `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
+    - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=$PATH:~/.cargo/bin" >> ~/.zshrc`
 9. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
 
 ## Verifying Setup
 
-This is the graded part of this project.  To verify that you have the correct versions installed, run `ruby test/public/public.rb` in this directory.  You should not get any errors.  This will create a file called p0.report.  Submit this file by running `gradescope-submit` in the project folder.  You will have to enter your credentials the first time, but for future projects you should not have to.  Alternatively, you can manually submit the file to Gradescope by uploading the p0.report file to the appropriate assignment.
+This is the graded part of this project.  To verify that you have the correct
+versions installed, run `ruby test/public/public.rb` in this directory.  You
+should not get any errors.  This will create a file called p0.report.  Submit
+this file by running `gradescope-submit` in the project folder.  You will have
+to enter your credentials the first time, but for future projects you should not
+have to.  Alternatively, you can manually submit the file to Gradescope by
+uploading the p0.report file to the appropriate assignment.
+
+## `gradescope-submit` Troubleshooting
+### Incorrect Passwords 
+Make sure that the email address and password you entered is of the account
+where your CMSC 330 course enrollment shows up. (If you login through "school
+credentials" option and don't remember your **Gradescope** password, please
+reset it.) Great chances are that people have multiple Gradescope accounts, and
+it is suggested to merge them before trying to submit by using the program.
+
+### HTTP Errors
+Remove the `gradescope-submit` config file by doing
+`rm -r ~/.gradescope-submit`. Then, refer to the troubleshooting for incorrect
+passwords and try it again.
