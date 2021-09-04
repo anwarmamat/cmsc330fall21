@@ -1,9 +1,7 @@
 ## Updates
-<ul>
-  <li>08-31 - Changed the due date from September 7 to September 9.</li>
-  <li>09-03 - You can add an unlisted number again after it has already been added as listed.</li>
-  <li>09-03 - You can assume the integer passed in to `isPalindrome()` is non-negative.</li>
-</ul>
+* 08-31 - Changed the due date from September 7 to September 9.</li>
+* 09-03 - You can add an unlisted number again after it has already been added as listed.</li>
+* 09-03 - You can assume the integer passed in to `isPalindrome()` is non-negative.</li>
 
 # Project 1a: Ruby Warmup
 
