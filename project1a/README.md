@@ -1,6 +1,6 @@
 # Project 1a: Ruby Warmup
 
-Due: September 7, 2021 at 11:59 PM (late September 8, *5% penalty*). **Note the deadline: just under one week**
+Due: September 9, 2021 at 11:59 PM (late September 10, *5% penalty*). **Note the deadline: just under one week**
 
 Points: 80 public, 20 semipublic
 
