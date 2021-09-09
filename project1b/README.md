@@ -142,6 +142,17 @@ In this part, you will complete the `GameBoard` class located in `game_board.rb`
 
 - **Description**: Add a `Ship` to your GameBoard. Return whether it was successful or not.
 - **Type**: `(Ship) -> Boolean`
+  
+  Note that types of the parameters in the `Ship` constructor are
+  - `start_position` : `Position`
+  - `orientation` : `Orientation` where an `Orientation` is one of following
+    `String`s 
+    + `"Up"`
+    + `"Down"`
+    + `"Left"`
+    + `"Right"`
+  - `size` : `Integer`
+
 - First check to see if you can add `Ship` to GameBoard. If you can't add it to the `GameBoard`, return `false`.
 - Check for the following rules
     - Ships can not overlap on the gameboard. 
@@ -277,3 +288,4 @@ For reading the file, use the `read_file_lines` function provided. `read_file_li
 - **Type**: `(String) -> Array`
 - Use `read_file_lines` function to read the file. Add the `Position`s to an array. If a line doesn't follow the format provided above, skip it. The function returns `nil` if the file doesn't exist. Please note that attacking the same position is allowed, it's just a poor attack strategy.
 - Don’t do boundary validation here; invalid `Position`s will be dropped when actually playing the game based on your `attack_pos` implementation.
+
