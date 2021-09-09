@@ -1,3 +1,8 @@
+## Updates
+<ul>
+  <li>08-31 - Changed the due date from September 12 to September 13.</li>
+</ul>
+
 # Project 1b: Battleship Game
 
 Due: September 13, 2021 at 11:59 PM (late September 14, *10% penalty*).
