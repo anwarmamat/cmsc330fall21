@@ -1,5 +1,5 @@
 # Discussion 1
-Due: 4 June 2021, 11:59pm EDT (No late submissions will be accepted)
+Due: 11 September 2021, 11:59pm EDT (No late submissions will be accepted)
 
 Points: 100 public
 
