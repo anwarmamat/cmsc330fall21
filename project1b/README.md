@@ -145,9 +145,7 @@ In this part, you will complete the `GameBoard` class located in `game_board.rb`
   
   Note that types of the parameters in the `Ship` constructor are
   - `start_position` : `Position`
-  - `orientation` : `Orientation`
-  
-  where `Orientation` is one of following
+  - `orientation` : `Orientation` where `Orientation` is one of following
     `String`s 
     + `"Up"`
     + `"Down"`
