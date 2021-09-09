@@ -274,6 +274,7 @@ Follow [the directions for macOS](#macos), but with some changes.
   - Go there: `cd /tmp/cmsc330`
   - Clone the librsvg repository: `git clone https://gitlab.gnome.org/GNOME/librsvg.git`
   - Enter it: `cd librsvg`
+  - Run `export XML_CATALOG_FILES="/usr/local/etc/xml/catalog"`
   - Run the configuration script: `./autogen.sh --enable-gtk-doc`
   - Run `make`
   - Run `make install`
