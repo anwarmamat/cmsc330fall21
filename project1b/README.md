@@ -220,11 +220,11 @@ Each part is seperated by a comma followed by a single space.
     -  `Position` pair should be from 1 to` max_row` and 1 to `max_column`. For this part of the project, you may assume ithe 10X10 board size.
     - Notice there is no space after or before the comma, and the number can be more than one digit. 
 - Orientation
-    - Either
-        - `Up` 
-        - `Down`
-        - `Left`
-        - `Right`
+    - One of following `String`s
+        - `"Up"` 
+        - `"Down"`
+        - `"Left"`
+        - `"Right"`
 - Size
     - An integer between 1 to 5
 
