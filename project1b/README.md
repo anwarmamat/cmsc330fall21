@@ -142,6 +142,7 @@ In this part, you will complete the `GameBoard` class located in `game_board.rb`
 
 - **Description**: Add a `Ship` to your GameBoard. Return whether it was successful or not.
 - **Type**: `(Ship) -> Boolean`
+  
   Note that types of the parameters in the `Ship` constructor are
   - `start_position` : `Position`
   - `orientation` : `Orientation` where `Orientation` is one of following
