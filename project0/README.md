@@ -99,8 +99,8 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
     - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
-      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.zshrc`
-      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.zshrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.bashrc`
 7. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
 
@@ -139,8 +139,8 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
     - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
-      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.zshrc`
-      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.zshrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.bashrc`
 8. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
@@ -177,8 +177,8 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
     - Go to [https://www.rust-lang.org/tools/install](https://www.rust-lang.org/tools/install) and run the installation command provided
     - If prompted, just select the defaults
     - Append `~/.cargo/bin` to the `PATH` environment variable. Frist, do `echo $SHELL`.
-      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.zshrc`
-      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"~/.cargo/bin:$PATH\"" >> ~/.bashrc`
+      - If `echo $SHELL` gives `/bin/zsh`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.zshrc`
+      - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.bashrc`
 9. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
