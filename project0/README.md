@@ -1,34 +1,27 @@
 # Project 0: Setup
+
 Due: September 14, 2021 at 11:59 PM
 
 This project is simply to get your system ready.  You will "submit" this project for a grade.  The good-faith attempt (GFA) rule **does not apply** to this project.
 
-## NOTES:
-### Problem with OPAM?
-If you are failing the public test with error "The wrong version of OPAM is installed. Expected '2.0' Actual '2.1'", modify line 10 in `public.rb` from
-```
-OPAM_VERSION = "2.0"
-```
-to
-```
-OPAM_VERSION = "2.1"
-```
+**Start with the [Instructions](#instructions)!**
 
-### Do you have a macbook with an M1 chip?
-Follow the directions for macOS, but do the following for Step 6 instead:
 
-- We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
-- If you are already on 4.12.0, you can skip to the final step in this list.
-- Run `opam update`
-- If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
-- To wrap up, let's make sure you don't fail the validation test. Modify line 9 in `public.rb` from 
-    ```
-    OCAML_VERSION = "4.11"
-    ```
-    to
-    ```
-    OCAML_VERSION = "4.12"
-    ```
+## Table of Contents
+
+- [Languages and Packages](#languages-and-packages)
+- [Instructions](#instructions)
+  - [Linux (NOT WSL)](#linux-not-wsl)
+  - [Windows](#windows)
+  - [macOS](#macos)
+- [Verifying Setup](#verifying-setup)
+  - [Problem with OPAM?](#problem-with-opam)
+- [`gradescope-submit` troubleshooting](#gradescope-submit-troubleshooting)
+  - [Incorrect Passwords](#incorrect-passwords)
+  - [HTTP Errors](#http-errors)
+- [Special macOS Instructions](#special-macos-instructions)
+  - [Do you have a Mac with an Apple Silicon (M1) chip?](#do-you-have-a-mac-with-an-apple-silicon-m1-chip)
+  - [Do you have a Mac running an older version of macOS?](#do-you-have-a-mac-running-an-older-version-of-macos)
 
 
 ## Languages and Packages
@@ -49,6 +42,7 @@ In this course, we will primarily be using Ruby and OCaml.  Below is a summary o
 - [SQLite3](https://sqlite.org)
 - [Graphviz](http://graphviz.org)
 
+
 ## Instructions
 
 First, you will need to clone this repository to your local filesystem.  You'll only have to do this once this semester (unless you have multiple computers or delete the repository).  To do this, run:
@@ -64,6 +58,7 @@ The following sections will help you install the necessary packages and programs
 The output of each command is important, please pay careful attention to what each one prints.  If you encounter an error message, do not ignore it.  We will be available in office hours to help you get set up if you run into problems.  As a general rule, no output means the command executed successfully.
 
 **Please skip to the section below that corresponds with your operating system.**
+
 
 ### Linux (NOT WSL)
 
@@ -103,6 +98,7 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
       - If `echo $SHELL` gives `/bin/bash`, do `echo "export PATH=\"$HOME/.cargo/bin:$PATH\"" >> ~/.bashrc`
 7. Install gradescope-submit
     - Run `cargo install gradescope-submit`.  If this fails, try closing and re-opening your terminal window.
+
 
 ### Windows
 
@@ -145,7 +141,10 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
 
+
 ### macOS
+
+Check the [Special macOS Instructions](#special-macos-instructions) to check if you need to follow any special steps, then come back here.
 
 1. Install the Homebrew package manager (Updated in Fall 2021)
     - Run `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
@@ -183,6 +182,7 @@ These instructions assume you have a Debian-based system (e.g. Ubuntu).  If you 
     - Run `cargo install gradescope-submit`.  If this fails, try closing and
       re-opening your terminal window.
 
+
 ## Verifying Setup
 
 This is the graded part of this project.  To verify that you have the correct
@@ -193,15 +193,99 @@ to enter your credentials the first time, but for future projects you should not
 have to.  Alternatively, you can manually submit the file to Gradescope by
 uploading the p0.report file to the appropriate assignment.
 
+
+### Problem with OPAM?
+
+If you are failing the public test with error "The wrong version of OPAM is installed. Expected '2.0' Actual '2.1'", modify line 10 in `public.rb` from
+
+```
+OPAM_VERSION = "2.0"
+```
+
+to
+
+```
+OPAM_VERSION = "2.1"
+```
+
+
 ## `gradescope-submit` Troubleshooting
+
+
 ### Incorrect Passwords 
+
 Make sure that the email address and password you entered is of the account
 where your CMSC 330 course enrollment shows up. (If you login through "school
 credentials" option and don't remember your **Gradescope** password, please
 reset it.) Great chances are that people have multiple Gradescope accounts, and
 it is suggested to merge them before trying to submit by the program.
 
+
 ### HTTP Errors
+
 Remove the `gradescope-submit` config file by doing
 `rm -r ~/.gradescope-submit`. Then, refer to the troubleshooting for incorrect
 passwords and try it again.
+
+
+## Special macOS Instructions
+
+
+### Do you have a Mac with an Apple Silicon (M1) chip?
+
+Follow [the directions for macOS](#macos), but do the following for Step 6 instead:
+
+- We will be using OCaml version 4.12.0.  Run `ocaml -version` to check which version is currently installed
+- If you are already on 4.12.0, you can skip to the final step in this list.
+- Run `opam update`
+- If you are on another version, run `opam switch 4.12.0`.  If you get an error saying that switch is not currently installed, run `opam switch create 4.12.0`.
+- To wrap up, let's make sure you don't fail the validation test. Modify line 9 in `public.rb` from 
+    ```
+    OCAML_VERSION = "4.11"
+    ```
+    to
+    ```
+    OCAML_VERSION = "4.12"
+    ```
+
+
+### Do you have a Mac running an older version of macOS?
+
+Verify you're running an older version of macOS. Either click the Apple button in the menubar in the top-left and click "About This Mac", or else run `sw_vers` from the terminal.
+
+Follow [the directions for macOS](#macos), but with some changes.
+
+- Step 3.
+  - Instead do `brew install ocaml opam`
+- Step 10. Install OpenSSL.
+  - Run `brew edit openssl`
+  - Edit the file that's opened
+    - NOTE: By default, Homebrew will put you in vim for this. If you're not familiar with vim: type `i` to switch to a regular editing mode, make the changes below, then (when you're done) hit `ESC` followed by `:wq`, then press `ENTER`.
+    - Scroll to the line `args = %W[`
+    - At the bottom of this list (which should have items like `--prefix=#{prefix}`, `--openssldir=#{openssldir}`, `no-ssl3`, etc), add a new line:
+      - `-I/Library/Developer/CommandLineTools/SDKs/MacOSX.sdk/usr/include`
+    - Save and close the file.
+    - You can look at [this Stack Overflow answer](https://stackoverflow.com/a/68990901/3377150) to see what it should look like.
+  - Run `brew install openssl@1.1`
+- Step 11. Install dependencies.
+  - Run `brew install readline sqlite xz python@3.9 ninja meson libffi pcre glib sphinx-doc cmake jasper netpbm gts util-macros xtrans xcb-proto libpthread-stubs xorgproto libxau libxdmcp libxcp libx11 libxext libxrender lzo pixman cairo gobject-introspection libssh2 gdk-pixbuf fribidi graphite2 icu4c harfbuzz pango libtool automake gtk-doc pkgconfig`
+- Step 12. Install librsvg from source.
+  - Create a temporary directory: `mkdir /tmp/cmsc330`
+  - Go there: `cd /tmp/cmsc330`
+  - Clone the librsvg repository: `git clone https://gitlab.gnome.org/GNOME/librsvg.git`
+  - Enter it: `cd librsvg`
+  - Run the configuration script: `./autogen.sh --enable-gtk-doc`
+  - Run `make`
+  - Run `make install`
+  - Leave the directory: `cd ..`
+- Step 13. Install graphviz from source.
+  - Download the archive: `curl -o graphviz.tz https://gitlab.com/api/v4/projects/4207231/packages/generic/graphviz-releases/2.49.0/graphviz-2.49.0.tar.gz`
+  - Extract the archive: `tar -xzvf graphviz.tz`
+  - Move into the created directory: `cd graphviz-2.49.0`
+  - Run the configuration script: `./configure`
+  - Run `make`
+  - Run `make install`
+- Step 14. Check it worked.
+  - Assuming no errors came up, graphviz should now be installed.
+  - Verify by doing `dot -V`
+    - This should output a version number. If it says something like "command not found", something didn't go right.
