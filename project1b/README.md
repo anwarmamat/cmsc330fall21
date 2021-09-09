@@ -280,7 +280,7 @@ For reading the file, use the `read_file_lines` function provided. `read_file_li
 
 ### Ship
 
-Note that the types of `Ship` constructor parameters are 
+Note that the types of the `Ship` constructor parameters are 
 - `start_position` : `Position`
 - `orientation` : `Orientation` where `Orientation` is one of following
   `String`s 
