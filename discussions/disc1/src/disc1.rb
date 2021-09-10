@@ -1,4 +1,4 @@
-# We will be implimenting a simple database table using Ruby data structures to store the data.
+# We will be implementing a simple database table using Ruby data structures to store the data.
 # The class Tuple represents an entry in a table.
 # The class Table represents a collection of tuples.
 
