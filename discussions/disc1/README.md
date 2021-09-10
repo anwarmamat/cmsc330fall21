@@ -125,7 +125,7 @@ A `Table` represents a collection of tuples.  The methods below will be implemen
   #   0  |  1  |  2  
   #  "x" | "y" | "z" 
 
-  table2 = table.selectTuples(["a, c"])
+  table2 = table.selectTuples(["a", "c"])
   # The call above should return a NEW table that looks like this:
   #   a  |  c  
   # -----+-----
