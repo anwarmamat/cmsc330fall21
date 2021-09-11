@@ -144,6 +144,6 @@ A `Table` represents a collection of tuples.  The methods below will be implemen
   x = Tuple.new([0, 1, 2])
   table.insertTuple(x)                # Returns true
   y = Tuple.new(["x", "y", "z"])
-  table.insert.Tuple(y)               # Returns true
+  table.insertTuple(y)               # Returns true
   table.getTuples()                   # Returns [[0, 1, 2], ["x", "y", "z"]]
   ```
