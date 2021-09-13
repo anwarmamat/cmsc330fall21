@@ -1,6 +1,6 @@
 ## Updates
 <ul>
-  <li>08-31 - Changed the due date from September 12 to September 13.</li>
+  <li>09-12 - Changed the due date from September 13 to September 14.</li>
 </ul>
 
 # Project 1b: Battleship Game
