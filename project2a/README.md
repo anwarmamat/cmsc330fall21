@@ -279,7 +279,7 @@ Implement the following functions using recursion.
   is_palindrome [] = true
   is_palindrome [1; 2; 3; 2; 1] = true
   is_palindrome ["A"; "b"; "b"; "A"] = true
-  is_palindrome ["O", "C", "A", "M"; "L"] = false
+  is_palindrome ["O"; "C"; "A"; "M"; "L"] = false
   ```
 
 ## Academic Integrity
