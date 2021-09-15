@@ -1,8 +1,6 @@
 # Project 2a: OCaml Warmup
 
-CMSC 330, Fall 2021
-
-Due February 27 (late February 28, *10% penalty*)
+Due: September 27, 2021 at 11:59 PM (late September 28, *10% penalty*)
 
 Points: 70 public, 15 semipublic, 15 secret
 
@@ -22,7 +20,7 @@ In your code, you may **only** use library functions found in the [`Stdlib` modu
 
 You will submit this project to [Gradescope](https://www.gradescope.com/courses/171498/assignments/667131).  You may only submit the **basics.ml** file.  
 
-To test locally, run `dune runtest -f` from the `setup` directory. We recommend you write student tests in `test/student/student.ml`.
+To test locally, run `dune runtest -f` from the project directory. We recommend you write student tests in `test/student/student.ml`.
 
 You can interactively test your code by doing `dune utop src` (assuming you have `utop`). Then you should be able to use any of the functions. All of your commands in `utop` need to end with two semicolons (i.e. `;;`), otherwise it will appear that your terminal is hanging.
 
