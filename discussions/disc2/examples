@@ -1,0 +1,79 @@
+OCaml Typing
+----------------------------------------------------------
+1. 
+let f x y = x + y
+
+
+2. 
+let f x y = [x; y]
+
+
+3. 
+let f a = 
+if a then 1 else "hi"
+
+
+4. 
+let f a b = 
+if a then 0 else b
+
+
+5. 
+let f a b c = 
+let d = "hi" ^ a ^ b ^ c in 
+d == "hello"
+
+
+6. 
+float -> float -> float
+
+
+7. 
+'a -> 'b -> 'b list
+
+
+8. 
+int -> float -> int
+
+
+9. 
+'a -> 'a -> 'a list
+
+--------------------------------------------------------------
+OCaml Programming & Execution
+--------------------------------------------------------------
+1. What is the value of the following OCaml expression? 
+
+let x = 5 in 
+let y = 4 in 
+let x = 3 in 
+if x < y then x * y else x / y
+
+
+
+2. What is the value of the following OCaml expression? 
+
+let rec f1 l c = 
+match l with 
+| [] -> c
+| h ::t -> (h * c) + (f1 t (c - 1))
+in f1 [1; 2; 3; 4] 5
+
+
+
+3. Write sum_thresh: int list -> int -> int, which returns the sum of all elements
+strictly less than the int parameter
+
+
+
+4. Write a function check_matrix, which applied to lst (type 'a list list),
+returns whether lst is a well-formed matric, meaning the number of elements in each 
+sublist is the same. Note that it does not have to be a square matrix (n x n). 
+If lst is empty, return true
+
+check_matrix [[1; 2]; [2; 4]; [3; 6]] -> true
+check_matrix [[1; 2; 3], [4; 5]] -> false
+
+let check_matrix (lst : 'a list list) : (bool) = 
+
+
