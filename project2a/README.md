@@ -166,7 +166,7 @@ Implement the following functions using recursion.
   gcf 0 0 = 0
   gcf 3 0 = 3
   gcf 12 8 = 4
-  gcf 6 24 = 6
+  gcf 24 6 = 6
   gcf 27 10 = 1
   gcf 13 13 = 13
   gcf 128 96 = 32
