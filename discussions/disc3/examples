@@ -1,0 +1,106 @@
+Tuples
+-------------------------------------------------
+
+1) let x = (1, "hello")
+
+--------------------------------------------------
+Records
+-------------------------------------------------
+
+1) 
+type student_information = 
+{
+    name : string;
+    age : int;
+}
+
+--------------------------------------------------
+Let In 
+------------------------------------------------
+
+1) 
+let x = 3 in 
+let y = 4 in 
+x + y
+
+2) 
+let x = (1, 2) in 
+let (i, s) = x in 
+i + s
+
+----------------------------------------------------
+Map
+----------------------------------------------------
+
+let rec map f lst = 
+match lst with 
+| [] -> []
+| h::t -> (f h)::(map f t)
+
+
+[1; 2; 3; 4] -- map --> [(f 1); (f 2); (f 3); (f 4)]
+
+
+1) Trace through the following code:
+type record_name = { field1 : int; field2 : int; field3 : int };;
+map (fun x -> {field1 = x - 1; field2 = x; field3 = x + 1}) [1; 2; 3; 4]
+
+Answer: [{}; {}; {}; {}]
+
+
+2) Trace through the following code:
+map (fun (phrase, person) -> phrase ^ " to " ^ person) [("hello", "you"); ("good morning", "me")]
+
+Answer: [""; ""]
+
+
+3) Write the function add_three, which takes an int list and adds 3 to each element
+let add_three lst = 
+
+
+4) Write the function add_three_point_four, which takes an int list and adds 3.4 to each element
+let add_three_point_four lst = 
+
+
+-------------------------------------------------------------
+Fold
+-------------------------------------------------------------
+
+let rec fold f a lst = 
+match lst with 
+| [] -> a
+| h::t -> fold f (f a h) t
+
+
+1) Trace through the following code: 
+fold (fun a h -> a + h) 0 [1; 2; 3; 4; 5]
+
+Answer: (Some integer)
+
+
+2) Trace through the following code: 
+fold (fun a h -> if h mod 3 = 0 then h::a else a) [] [1; 3; 14; 27]
+
+Answer: (Some list)
+
+
+-------------------------------------------------------------
+Fold Right
+-------------------------------------------------------------
+
+let rec foldr f lst a = 
+match lst with 
+| [] -> a
+| h::t -> f h (foldr f t a)
+
+
+1) Trace through the following code: 
+foldr (fun h a -> if h mod 3 = 0 then h::a else a) [1; 3; 14; 27] []
+
+Answer: (Some list)
+
+
+2) Write sum_thresh: int list -> int -> int, which returns the sum of all elements
+strictly less than the int parameter
+
+let sum_thresh lst x = 
