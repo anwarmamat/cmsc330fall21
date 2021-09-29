@@ -10,7 +10,7 @@
 ## Discussion Exercises
 
 * [Discussion 0](./discussions/Disc%200.pdf)
-* [Discussion 1](./discussions/disc1)
+* [Discussion 1](./discussions/disc1) (Graded)
 * [Discussion 2](./discussions/disc2)
 * [Discussion 3](./discussions/disc3)
-* [Discussion 4](./discussions/disc4)
+* [Discussion 4](./discussions/disc4) (Graded)
