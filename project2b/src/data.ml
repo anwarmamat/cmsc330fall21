@@ -48,7 +48,7 @@ let rec map_get k t =
 (* Modify the next line to your intended type *)
 type lookup_table = unit
 
-let empty_table () : lookup_table = failwith "unimplemented"
+let empty_table : lookup_table = ()
 
 let push_scope (table : lookup_table) : lookup_table = 
   failwith "unimplemented"
