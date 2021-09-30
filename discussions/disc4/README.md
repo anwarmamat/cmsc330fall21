@@ -82,19 +82,19 @@ Now, we would represent the above list as `Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons
 - **Description**: Converts a lengthlist into its equivalent Ocaml list.
 - **Examples**:
   ```ocaml
-  lengthlist (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = [1;1;1;1;2;2;2;3;3;4]
-  lengthlist Empty = []
-  lengthlist (Cons("hi", 2, Cons("hello", 3, Empty))) = ["hi"; "hi"; "hello"; "hello"; "hello"]
+  list_of_lengthlist (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = [1;1;1;1;2;2;2;3;3;4]
+  list_of_lengthlist Empty = []
+  list_of_lengthlist (Cons("hi", 2, Cons("hello", 3, Empty))) = ["hi"; "hi"; "hello"; "hello"; "hello"]
   ```
 
-#### `map fn llst`
+#### `map_lengthlist fn llst`
 
 - **Type**: `('a->'b) -> 'a lengthlist -> 'b lengthlist`
 - **Description**: Recreate the map function, but for lengthlists. Note that we only operate on the elements, and not the number of each element.
 - **Examples**:
   ```ocaml
-  map (+ 3) (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons(4, 4, Cons(5, 3, Cons(6, 2, Cons(7, 1, Empty))))
-  map string_of_int (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons("1:, 4, Cons("2", 3, Cons("3", 2, Cons("4", 1, Empty))))
+  map_lengthlist (+ 3) (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons(4, 4, Cons(5, 3, Cons(6, 2, Cons(7, 1, Empty))))
+  map_lengthlist string_of_int (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons("1":, 4, Cons("2", 3, Cons("3", 2, Cons("4", 1, Empty))))
   ```
 
 #### `decrement_count llst`
