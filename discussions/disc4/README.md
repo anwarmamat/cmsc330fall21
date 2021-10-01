@@ -93,7 +93,7 @@ Now, we would represent the above list as `Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons
 - **Description**: Recreate the map function, but for lengthlists. Note that we only operate on the elements, and not the number of each element.
 - **Examples**:
   ```ocaml
-  map_lengthlist (+ 3) (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons(4, 4, Cons(5, 3, Cons(6, 2, Cons(7, 1, Empty))))
+  map_lengthlist ((+) 3) (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons(4, 4, Cons(5, 3, Cons(6, 2, Cons(7, 1, Empty))))
   map_lengthlist string_of_int (Cons(1, 4, Cons(2, 3, Cons(3, 2, Cons(4, 1, Empty))))) = Cons("1:, 4, Cons("2", 3, Cons("3", 2, Cons("4", 1, Empty))))
   ```
 
