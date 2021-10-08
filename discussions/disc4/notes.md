@@ -26,11 +26,11 @@
 
     Variant types are also great for implementing _recursive data structures_! Take for example, a linked list:
     ```ocaml
-    type 'a linked_list = Cons of 'a*'a linked_list | Empty
+    type 'a linked_list = Cons of 'a * 'a linked_list | Empty
     ```
     or a binary tree
     ```ocaml
-    type 'a btree = Node of 'a*'a*btree | Leaf
+    type 'a btree = Node of 'a * 'a btree * 'a btree | Leaf
     ```
 
 ## Closures
