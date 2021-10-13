@@ -16,3 +16,6 @@
 * [Discussion 3](./discussions/disc3)
 * [Discussion 4](./discussions/disc4) (Graded)
 * [Discussion 5](./discussions/disc5)
+## Solutions
+
+* [Quiz 1 Fall 2021](./solutions/quizfall21.pdf)
