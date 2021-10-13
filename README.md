@@ -18,4 +18,4 @@
 * [Discussion 5](./discussions/disc5)
 ## Solutions
 
-* [Quiz 1 Fall 2021](./solutions/quizfall21.pdf)
+* [Quiz 1 Fall 2021](./solutions/quiz1fall21.pdf)
