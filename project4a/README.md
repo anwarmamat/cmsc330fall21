@@ -1,3 +1,6 @@
+## Updates
+- 11/02 - Corrected typo in introduction example AST
+
 # Project 4a: MicroCaml Lexer and Parser
 Due: November 16th, 2021, 11:59PM (Late: November 17th, 2021, 11:59PM)
 
@@ -18,7 +21,7 @@ parse_mutop (tokenize "def b = let x = true in x;;")
 This will return the AST as the following OCaml value (which we will explain in due course):
 
 ```ocaml
- Def ("f", Let ("x", false, Value (Bool true), ID "x"))
+ Def ("b", Let ("x", false, Value (Bool true), ID "x"))
 ```
 
 ### Ground Rules
