@@ -96,7 +96,7 @@ Most tokens only exist in one form (for example, the only way for `Tok_Concat` t
 - `Tok_String of string`: Valid string will always be surrounded by `""` and **should accept any character except quotes** within them (as well as nothing). You have to "sanitize" the matched string to remove surrounding escaped quotes.
   - *Regular Expression*: `\"[^\"]*\"`
   - *Examples*:
-    - `tokenize "330" = [Tok_ID "330"]`
+    - `tokenize "330" = [Tok_Int "330"]`
     - `tokenize "\"330\"" = [Tok_String "330"]`
     - `tokenize "\"\"\"" (* InvalidInputException *)`
 - `Tok_ID of string`: Valid IDs must start with a letter and can be followed by any number of letters or numbers. **Note: Keywords may be substrings of IDs**.
