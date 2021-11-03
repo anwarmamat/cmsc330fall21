@@ -1,5 +1,5 @@
 ## Updates
-- 11/02 - Corrected typo in introduction example AST
+- 11/02 - Corrected typos in introduction example AST and tokenize example
 
 # Project 4a: MicroCaml Lexer and Parser
 Due: November 16th, 2021, 11:59PM (Late: November 17th, 2021, 11:59PM)
