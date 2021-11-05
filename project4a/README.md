@@ -156,12 +156,12 @@ We present a quick overview of `parse_expr` first, then the definition of AST ty
 - **Exceptions:** Raise `InvalidInputException` if the input fails to parse i.e does not match the MicroCaml expression grammar.
 - **Examples** (more below):
   ```ocaml
-  parse_expr [Tok_Int(1); Tok_Add; Tok_Int(2)] =  Binop (Add, Value (Int 1), Value (Int 2))
+  parse_expr [Tok_Int(1); Tok_Add; Tok_Int(2)] =  ([], Binop (Add, Value (Int 1), Value (Int 2)))
 
-  parse_expr [Tok_Int(1)] = Value (Int 1)
+  parse_expr [Tok_Int(1)] = ([], Value (Int 1))
 
   parse_expr [Tok_Let; Tok_ID("x"); Tok_Equal; Tok_Bool(true); Tok_In; Tok_ID("x")] = 
-  Let ("x", false, Value (Bool true), ID "x")
+  ([], Let ("x", false, Value (Bool true), ID "x"))
 
   parse_expr [Tok_DoubleSemi] (* raises InvalidInputException *)
   ```
