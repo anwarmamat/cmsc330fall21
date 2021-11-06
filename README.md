@@ -9,6 +9,7 @@
 * [Project 2b - OCaml Higher Order Functions and Data](./project2b)
 * [Project 3 - Regular Expression Engine](./project3)
 * [Project 4a - MicroCaml Lexer and Parser](./project4a)
+* [Project 4b - MicroCaml Interpreter](./project4b)
 ## Discussion Exercises
 
 * [Discussion 0](./discussions/Disc%200.pdf)
