@@ -17,6 +17,12 @@
 * [Discussion 3](./discussions/disc3)
 * [Discussion 4](./discussions/disc4) (Graded)
 * [Discussion 5](./discussions/disc5)
+* [Discussion 6](./discussions/disc6)
+* [Discussion 7](./discussions/disc7)
+* [Discussion 8](./discussions/disc8)
+* [Discussion 9](./discussions/disc9)
 ## Solutions
 
-* [Quiz 1 Fall 2021](./solutions/quiz1fall21.pdf)
+* [Quiz 1 Fall 2021](./solutions/quiz1fall21solns.pdf)
+* [Exam 1 Fall 2021](./solutions/exam1fall21solns.pdf)
+* [Quiz 2 Fall 2021](./solutions/quiz2fall21solns.pdf)
