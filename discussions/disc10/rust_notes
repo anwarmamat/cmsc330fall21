@@ -1,0 +1,65 @@
+Rust Types (Some examples)
+-----------------------------------------------------
+integer: 
+float: 
+Array of type T: 
+Tuple: 
+str: 
+String: 
+
+----------------------------------------------------------
+Borrowing and References
+----------------------------------------------------------
+1) 
+x = String::from("hello")
+y = x
+println!(x)
+
+2) 
+{
+    x = String::from("hello");
+    y = x;
+    println!(y)
+}
+println!(y)
+
+3) 
+{
+    x = String::from("hello");
+    y = &x;
+    println!(*y);
+    println!(x);
+}
+
+4) 
+{
+    x = String::from("hello");
+    y = &mut x;
+    z = &x;
+    w = &x;
+    println!(*y);
+    println!(x);
+}
+
+----------------------------------------------------------
+Coding Practice 
+----------------------------------------------------------
+1) Write a function that returns the sum of the even integers 
+in the range [i, j)
+sum_evens(0, 6) = 6 (0 + 2 + 4)
+
+pub fn sum_evens(i: i32, j: i32) -> i32 {
+
+}
+
+
+2) Write a function that takes an array and adds 1 to each element
+in place
+let mut arr = [0, 1, 2]
+raise_1(&mut arr)
+// arr = [1, 2, 3]
+
+pub fn raise_1(arr: &mut [i32]) {
+    
+}
+
