@@ -1,0 +1,7 @@
+[package]
+name = "disc12"
+version = "1.0.0"
+edition = "2018"
+authors = ["Anwar Mamat <anwar@cs.umd.edu>"]
+description = "CMSC330 Fall 2019 Discussion 12"
+homepage = "https://github.com/anwarmamat/cmsc330fall19public/disc/d12"
