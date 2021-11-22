@@ -1,4 +1,4 @@
-# Project 6: Stark Suit Repair
+# Project 5: Stark Suit Repair
 Due: 6 December 2020 at 11:59pm (Late 7 December, with *10% penalty*)
 
 Public: 48pts, Semipublic: 52pts
